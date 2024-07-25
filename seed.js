@@ -71,7 +71,7 @@ const gameData = [
         parent_platforms: [
             { id: 1, name: 'PC', slug: 'pc' },
             { id: 2, name: 'PlayStation', slug: 'playstation' },
-            { id: 3, name: 'Xbox', slug: 'xbox' }
+            // { id: 3, name: 'Xbox', slug: 'xbox' }
         ],
         background_image: "https://assets-prd.ignimgs.com/2023/10/31/bloodlines2-phyre-keyart-1698768010178.png?crop=16%3A9&width=888",
         genre_slug: "rpg"

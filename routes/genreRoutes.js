@@ -8,7 +8,7 @@ const {
   updateGenre,
   deleteGenre,
   getSingleGenre,
-} = require('../controllers/genrecontroller');
+} = require('../controllers/genreController');
 
 router.route('/').post( createGenre).get(getAllGenres);
 

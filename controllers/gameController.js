@@ -1,5 +1,4 @@
 const Game = require('../Models/Game');
-const User = require('../Models/user');
 
 const { StatusCodes } = require('http-status-codes');
 
@@ -22,11 +21,24 @@ const createGame = async (req, res) => {
 
 const getAllGames = async (req, res) => {
   const genre = req.query.genre;
+  const platform = req.query.platform;
   console.log(genre)
+  console.log(platform)
+  
+
+  if (platform) {
+    const games = await Game.find({ 'parent_platforms.slug': platform });
+
+    if (games.length !== 0) {
+      return res.status(StatusCodes.OK).json({ count : games.length , results : games });
+    }
+    else
+    return res.status(StatusCodes.OK).json({ count : games.length , results : [] });
+  }
+  
 
   if (genre) {
     const games = await Game.find({ genre_slug: genre });
-    console.log(games)
 
     if (games.length !== 0) {
       return res.status(StatusCodes.OK).json({ count : games.length , results : games });

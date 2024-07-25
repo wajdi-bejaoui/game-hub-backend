@@ -43,10 +43,23 @@ db.once('open', () => {
 
 const gameRouter = require("./routes/gameRoutes")
 const genreRouter = require("./routes/genreRoutes")
+const platformRouter = require("./routes/platformRoutes")
 
 
 app.use('/api/v1/games', gameRouter);
 app.use('/api/v1/genres', genreRouter);
+app.use('/api/v1/platforms', platformRouter);
+
+const port = 3000;
+
+
+
+// Your routes and other server configurations go here
+
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});
+
 
 
 
