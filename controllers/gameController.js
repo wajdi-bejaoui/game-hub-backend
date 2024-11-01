@@ -22,6 +22,7 @@ const createGame = async (req, res) => {
 const getAllGames = async (req, res) => {
   const genre = req.query.genre;
   const platform = req.query.platform;
+  const searchText = req.query.searchText;
   console.log(genre)
   console.log(platform)
   
