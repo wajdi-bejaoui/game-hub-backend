@@ -1,0 +1,6 @@
+[submodule "game-hub-backend"]
+	path = game-hub-backend
+	url = https://github.com/wajdi-bejaoui/game-hub-backend
+[submodule "game-hub-frontend"]
+	path = game-hub-frontend
+	url = https://github.com/wajdi-bejaoui/game-hub-frontend
